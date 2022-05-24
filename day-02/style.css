@@ -1,0 +1,120 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #3FAF82;
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+  }
+  
+  
+  
+  .nav, .nav::before, .nav::after {
+      height: 5px;
+      width: 4rem;
+      background-color: #fff;
+      border-radius: 3px;
+      display: inline-block;
+      transition: transform 0.5s;
+  }
+  
+   .nav {
+      position: relative
+  }
+  
+  .nav::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      animation: openBefore .5s ease-in-out;
+  }
+  
+  .nav::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      animation: openAfter .5s ease-in-out;
+  }
+  
+  .center.active .nav {
+      background-color: transparent;
+  }
+  
+  .center.active .nav::before {
+      animation: closeBefore .5s forwards;
+  }
+  
+  .center.active .nav::after {
+          animation: closeAfter .5s forwards;
+  } 
+  
+   @keyframes openBefore {
+      0% {
+              transform: translate(0, 16px) rotate(45deg)
+      } 50%{
+              transform: translate(0, 16px)
+      } 100% {
+              transform: translate(0) rotate(0)
+      }
+  }
+  
+  @keyframes openAfter {
+      0% {
+          transform: translate(0, -16px) rotate(135deg)
+      } 50%{
+          transform: translate(0, -16px) 
+      } 100% {
+          transform: translate(0, 0) rotate(0)
+      }
+  }
+  
+  @keyframes closeBefore {
+      0% {
+          transform: translate(0, 0) rotate(0)
+      }
+      50% {
+          transform: translate(0, 16px)
+      }
+      100% {
+          transform: translate(0, 16px) rotate(45deg)
+      }
+  }
+  
+  @keyframes closeAfter {
+      0% {
+          transform: translate(0, 0) rotate(0)
+      }
+      
+      50% {
+          transform: translate(0, -16px)
+      }
+      
+      100% {
+          transform: translate(0, -16px) rotate(135deg)
+      }
+  }
+   */
+  
