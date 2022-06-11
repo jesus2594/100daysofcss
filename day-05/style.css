@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap');
+
+
+.frame{
+  position:absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  background-color: #42A7A1;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  font-family: 'Nunito', sans-serif;
+}
+
+.center {
+  position: absolute;
+  width: 280px;
+  height: 220px;
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 3px;
+  top: 100px;
+  left: 60px;
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  width: 280px;
+  height: 60px;
+  background-color: #F1BA64;
+}
+
+.big{
+  position: absolute;
+  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+}
+
+.small {
+  position: absolute;
+  font-weight: 400;
+  color: #fff;
+  font-size: 13px;
+}
+
+.title {
+  top: 10px;
+  left: 10px;
+}
+
+.date {
+  top: 30px;
+  left: 10px;
+}
+
+.type{
+  top: 12px;
+  right: 10px;
+}
+
+.value {
+  top: 30px;
+  right: 10px;
+}
+
+.para-meters {
+  text-align: right;
+  padding: 5px 0 14px 0;
+}
+
+span{
+  position: relative;
+  font-size: 12px;
+  padding: 0 10px 0 22px;
+  line-height: 13px;
+  color: #606060;
+}
+
+span:before {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  display: block;
+  content: '';
+  height: 4px;
+  width: 11px;
+  border-radius: 8px;
+}
+
+.red:before {
+  background-color: red;
+}
+
+.blue:before {
+  background-color: blue;
+}
+
+.statiticks {
+  position:relative;
+  height: 80px;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.line-1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 260px;
+  height: 0.5px;
+  background-color: #D0C9C0;
+}
+
+.line-2{
+  top: 40px;
+  position: absolute;
+  width: 260px;
+  height: 0.5px;
+  background-color: #D0C9C0;
+}
+
+
+.line-3 {
+  top: 80px;
+  position: absolute;
+  width: 260px;
+  height: 0.5px;
+  background-color: #D0C9C0;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.red polyline {
+  stroke: #FA7373;
+}
+
+.blue polyline {
+  stroke: #7BA2FF;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 10px, 0);
+  color: #fff;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+  border-radius: 3px;
+  padding: 8px 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  margin-left: -3px;
+  bottom: -3px;
+}
+
+[class^="point-"] {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.red [class^="point-"], .tooltip, .tooltip:after {
+  background-color: #FA7373;
+}
+
+.red .point-1{
+  left: 7px;
+  top: 43px;
+}
+
+.red .point-2{
+  left: 46px;
+  top: 9px;
+}
+
+.red .point-3{
+  left: 86px;
+  top: 20px;
+}
+
+.red .point-4{
+  left: 127px;
+  top: 8px;
+}
+
+.red .point-5{
+  right: 85px;
+  top: 35px;
+}
+
+.red .point-6{
+  right: 45px;
+  top: 45px;
+}
+
+.red .point-7{
+  right: 8px;
+  top: 17px;
+}
+
+.blue [class^="point-"], .tooltip, .tooltip:after {
+  background-color: #7BA2FF;
+}
+
+.blue .point-1 { left: 7px; top: 58px; }
+.blue .point-2 { left: 48px; top: 47px; }
+.blue .point-3 { left: 88px; top: 62px; }
+.blue .point-4 { left: 128px; top: 52px; }
+.blue .point-5 { left: 169px; top: 58px; }
+.blue .point-6 { left: 209px; top: 71px; }
+.blue .point-7 { left: 249px; top: 61px; }
+
+.days {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.day{
+  width: 10px;
+  display: block;
+  float: left;
+  line-height: 40px;
+  font-size: 9px;
+  color: #949494;
+  text-align: center;
+  text-transform: uppercase;
+}
