@@ -1,0 +1,81 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #E56262;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .circle {
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5)
+  }
+  
+  .circle-1 {
+      height: 100px;
+      width: 100px;
+      animation: circle-1 2s cubic-bezier(.21,.98,.6,.99) alternate infinite both;
+  }
+  
+  .circle-2 {
+      height: 70px;
+      width: 70px;
+      animation: circle-2 2s cubic-bezier(.21,.98,.6,.99) alternate infinite both;
+  }
+  
+  .circle-3 {
+      height: 30px;
+      width: 30px;
+      animation: circle-3 2s cubic-bezier(.21,.98,.6,.99) alternate infinite both;
+  }
+  
+  @keyframes circle-1 {
+      0%, 10% {
+          transform: scale(0)
+      }
+      
+      100% {
+          transform: scale(1)
+      }
+  }
+  
+  @keyframes circle-2 {
+      0%, 40% {
+          transform: scale(0)
+      }
+  
+      100% {
+          transform: scale(1)
+      }
+  }
+  
+  @keyframes circle-3 {
+      0%, 70% {
+          transform: scale(0)
+      }
+      
+      100% {
+          transform: scale(1)
+      }
+  }
