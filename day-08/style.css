@@ -1,0 +1,124 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: black;
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      filter: contrast(5);
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .ball{
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: white;
+      filter: blur(3px);
+  }
+ .balls-around{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    filter: blur(3px);
+    transform-origin: -5px 30px;
+    animation: rotate 4s infinite linear ;
+  }
+  .balls-around:nth-child(2){
+    top: 5px;
+    left: -10px;
+    transform-origin: 45px 45px;
+  }
+
+.little-balls{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    position:absolute;
+    filter: blur(3px);
+    animation: rotate 4s infinite linear ;
+}
+.little-balls:nth-child(4){
+    top: -20px;
+    left: -40px;
+    transform-origin: 70px 5px;
+}
+.little-balls:nth-child(5){
+    top: 110px;
+    left: 80px;
+    transform-origin: 20px -60px;
+}
+.little-balls:nth-child(6){
+    top: 120px;
+    left: -30px;
+    transform-origin: 20px -60px;
+}
+
+.sparkles{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    position:absolute;
+    filter: blur(2px);
+    animation: rotate 3s infinite reverse linear;
+}
+.sparkles:nth-child(7){
+   top:0;
+   left: 60px;
+   transform-origin: 60px 50px;
+}
+.sparkles:nth-child(8){
+    top:30px;
+    left: -60px;
+    transform-origin: 30px -50px;
+ }
+
+ .little-sparkles{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    position:absolute;
+    filter: blur(2px);
+    animation: rotate 3s infinite reverse linear;
+ }
+ .little-sparkles:nth-child(9){
+    top:160px;
+    left: 20px;
+    transform-origin: 30px -50px;
+ }
+ .little-sparkles:nth-child(10){
+    top:30px;
+    left: -60px;
+    transform-origin: 40px 20px;
+ }
+
+
+@keyframes rotate {
+   0%{
+        transform: rotate(0);
+    }
+   100%{
+       transform: rotate(360deg);
+   } 
+}
