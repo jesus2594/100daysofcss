@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+}
+
+.window {
+	width: 100%;
+  position: absolute;
+	height: 310px;
+	top: 0;
+	background: #000a14;
+}
+
+/* -- hills layout --*/
+
+.hill {
+	 /* the master hill */
+	position: absolute;
+	width: 280px;
+	height: 200px;
+	background: #002952;
+	border-radius: 50%;
+	top: 220px;
+	left: 90px;
+	 /* other hills are offset shadows of the master hill */
+	box-shadow: 
+		-200px 30px #002952,
+		200px 30px #002952,
+		-120px -20px #001f3d,
+		120px -30px #001f3d;
+}
+
+/* -- bottom bar layout --*/
+
+#bottom-bar {
+	padding: 10px 15px;
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	height: 90px;
+	background: white;
+	bottom: 0;
+	left: 0;
+}
+#bottom-bar div {
+	margin: 10px;
+	display: inline-block;
+}
+#bottom-bar div:nth-child(n+3) {
+	float: right;
+	text-align: right;
+}
+#bottom-bar div:nth-child(3) {
+	margin-left: 0;
+	font-weight: 400;
+}
+
+p {
+	font-size: 16px;
+	line-height: 25px;
+	margin: 0;
+}
+b {	
+	font-size: 50px;
+	line-height: 50px;
+	font-weight: 300;
+}
+
+/* -- moon layout --*/
+
+#moon {
+	position: absolute;
+	background: #FFEDB8;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: 300px;
+	left: 30px;
+	box-shadow: 0 0 10px 0 #FFEDB8;
+	animation: moonrise 6s ease-out forwards;	
+	animation-delay: 0s;
+}
+#moon:after {
+	 /* the master crater is :after the moon div */
+	content: "";
+	position: absolute;
+	background: #FADFA8;
+	border-radius: 50%;
+	width: 14px;
+	height: 14px;
+	top: 13px;
+	left: 24px;
+	 /* the other craters are offset shadows of the master crater */
+	box-shadow: 
+		-16px -4px 0 -4px #FADFA8,
+		-16px -4px 0 -5px #FADFA8,
+		-17px 14px 0 -3px #FADFA8,
+		26px 10px 0 -2px #FADFA8,
+		10px 27px 0 -3px #FADFA8,
+		20px 36px 0 -3px #FADFA8,
+		-20px 34px 0 -1px #FADFA8,
+		24px -4px 0 -4px #FADFA8,
+		34px -2px 0 -3px #FADFA8;
+}
+
+@keyframes moonrise {
+  0% {
+    top: 300px;
+	  left: 30px;
+  }
+  100% {
+    top: 45px;
+	  left: 50px;
+  }
+}
+
+/* -- rain layout --*/
+
+ul.rain {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+}
+ul.rain li {
+	display: block;
+	width: 8px;
+	height: 8px;
+	transform: rotate(-0deg) translateY(-20px) scale(1,1);
+	animation: raindown .6s linear infinite;	
+	
+}
+ul.rain li:after {
+	 /* nesting the drop inside a parent container allows me to rotate the drop without affecting the rainfall animation x and y values */
+	content: "";
+	border-radius: 50% 0 50% 50%;
+	background: #298fca;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform: rotate(-35deg);
+}
+ul.rain.mid li {
+	width: 7px;
+	height: 7px;;
+	opacity: .75;
+	animation: midraindown .8s linear infinite;	
+}
+ul.rain.small li {
+	width: 6px;
+	height: 6px;
+	opacity: .5;
+	animation: smallraindown 1s linear infinite;	
+}
+
+ul.rain li:nth-child(1) {	
+	animation-delay: .1s;
+}
+ul.rain li:nth-child(3) {	
+	animation-delay: .6s;
+}
+ul.rain li:nth-child(4) {	
+	animation-delay: .2s;
+}
+ul.rain li:nth-child(5) {	
+	animation-delay: .9s;
+}
+ul.rain li:nth-child(6) {	
+	animation-delay: .5s;
+}
+ul.rain li:nth-child(7) {	
+	animation-delay: .4s;
+}
+ul.rain li:nth-child(8) {	
+	animation-delay: .8s;
+}
+ul.rain li:nth-child(9) {	
+	animation-delay: .3s;
+}
+
+/* -- rain animation --*/
+
+@keyframes raindown {
+  0% {
+    transform: translate(40px, -20px) scale(1,1);
+  }	
+	90% {
+		transform: translate(-20px, 297px) scale(1,1);
+  }
+	100% {
+    transform: translate(-20px, 307px) scale(6,.1);
+  }
+}
+
+@keyframes midraindown {
+  0% {
+    transform: translate(20px, -40px) scale(1,1);
+  }
+	90% {
+		transform: translate(-40px, 297px) scale(1,1);
+  }
+  100% {
+    transform: translate(-40px, 307px) scale(6,.1);
+  }
+}
+
+@keyframes smallraindown {
+  0% {
+    transform: translate(30px, -40px) scale(1,1);
+  }
+	90% {
+		transform: translate(-30px, 297px) scale(1,1);
+  }
+  100% {
+    transform: translate(-30px, 307px) scale(6,.1);
+  }
+}
