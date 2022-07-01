@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+  
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    background: #00CED1;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  @keyframes drop {
+    0% {
+      transform: translate3d(0, -300px, 0) scaleY(1.2);
+    }
+  
+    10% {
+      transform: translate3d(0, 50px, 0) scaleY(0.8);
+    }
+  
+    14% {
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+  
+    18% {
+      transform: translate3d(0, 10px, 0) scaleY(0.9);
+    }
+  
+    20%,
+    22% {
+      transform: translate3d(0, 0, 0) scaleY(1);
+    }
+  
+    26% {
+      transform: translate3d(0, 0, 0) scale(1.2);
+    }
+  
+    32%,
+    74% {
+      transform: translate3d(0, 0, 0) scale(0);
+    }
+  
+    80% {
+      transform: translate3d(0, 0, 0) scale(1.2);
+    }
+  
+    84% {
+      transform: translate3d(0, 0, 0) scale(0.9);
+    }
+  
+    86%,
+    88% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  
+    92% {
+      transform: translate3d(0, -30px, 0) scaleY(0.9);
+    }
+  
+    100% {
+      transform: translate3d(0, 300px, 0) scaleY(1.2);
+    }
+  }
+  
+  @keyframes dropRing {
+  
+    0%,
+    74% {
+      transform: translate3d(0, 0, 0) scale(0);
+      opacity: 1;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    84%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1.4);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes octa-bubling {
+  
+    30% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    45% {
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+  
+    50% {
+      transform: translate(-50%, -50%) scale(.9);
+    }
+  
+    55% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  
+    60% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+  
+  @keyframes octa-sparkle {
+    40% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    45% {
+      transform: translate(-50%, -50%) scale(1.3);
+      opacity: 1;
+    }
+  
+    50% {
+      transform: translate(-50%, -50%) scale(2);
+    }
+  
+    55% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(3);
+    }
+  
+    60% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+  
+  @keyframes tria-bubling {
+  
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    60% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    65% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  
+    70% {
+      transform: translate(-50%, -50%) scale(.9);
+    }
+  
+    75% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  
+    79% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+  
+  @keyframes triangle-sparkle {
+  
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+    }
+  
+    60% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  
+    65% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+    }
+  
+    70% {
+      transform: translate(-50%, -50%) scale(2);
+    }
+  
+    75% {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+    }
+  
+    80% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+  
+  .circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 155px;
+    left: 155px;
+    background: #fff;
+    border-radius: 50%;
+    animation: drop 5s ease-in-out infinite;
+  }
+  
+  .circleBorder {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 145px;
+    left: 145px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    animation: dropRing 5s ease-in-out infinite;
+  }
+  
+  .octagon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    -webkit-animation: octa-bubling 5s ease-in-out infinite;
+    animation: octa-bubling 5s ease-in-out infinite;
+  }
+  
+  .octagonRays {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    -webkit-animation: octa-sparkle 5s ease-in-out infinite;
+    animation: octa-sparkle 5s ease-in-out infinite;
+  }
+  
+  
+  .triangle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    -webkit-animation: tria-bubling 5s ease-in-out infinite;
+    animation: tria-bubling 5s ease-in-out infinite;
+  }
+  
+  .triangleRays {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    animation: triangle-sparkle 5s infinite ease-in-out;
+  }
+  
