@@ -1,0 +1,83 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #fff;
+    color: #333;
+  }
+  
+  .center {
+      display:flex;
+      height:400px;
+      justify-content:center;
+      align-items:center;
+  }
+  
+  input[type="radio"] {
+      display:none;
+  }
+  
+  .circle {
+      box-sizing:border-box;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      border:2px solid #fff;
+      position:relative;
+      z-index:3;
+      cursor:pointer;
+      margin-left:5px;
+      margin-right:5px;
+  }
+  
+  
+  .active {
+      width:40px;
+      height:40px;
+      background:#fff;
+      border-radius:50%;
+      position:absolute;
+      z-index:4;
+      top: 180px;
+      left: 120px;
+      transition: all 1s ease-in-out;
+  }
+  
+  #b1:checked ~ .active {
+      transform: translateX(0px);
+  }
+  #b2:checked ~ .active {
+      transform: translateX(60px);
+  }
+  #b3:checked ~ .active {
+      transform: translateX(120px);
+  }
+  
+  .bg{
+      position:absolute;
+      width:400px;
+      height:400px;
+      top:0;
+      left:0;
+      background:#61c0ff;
+      border-left: 400px solid #c861ff;
+      border-right: 400px solid #75f098;
+      transition: all 1s ease-in-out;
+  }
+  
+  #b1:checked ~ .bg {
+      transform: translateX(0px);
+  }
+  #b2:checked ~ .bg {
+      transform: translateX(-400px);
+  }
+  #b3:checked ~ .bg {
+      transform: translateX(-800px);
+  }
