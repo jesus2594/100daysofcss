@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+  
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #0F353D;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .pacman {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 150px;
+    fill: none;
+    stroke: #F4D146;
+    stroke-width: 50px;
+    stroke-linecap: butt;
+    stroke-dasharray: 157;
+    -webkit-animation: eat 0.7s ease-in-out infinite;
+    animation: eat 0.7s ease-in-out infinite;
+  }
+  
+  .dots {
+    position: absolute;
+    height: 14px;
+    width: 240px;
+    top: 193px;
+    left: 180px;
+    stroke: #F4D146;
+    stroke-width: 14px;
+    stroke-dasharray: 0px 50px;
+    stroke-linecap: round;
+    -webkit-animation: points 0.7s linear infinite;
+    animation: points 0.7s linear infinite;
+    stroke-dashoffset: 14;
+  }
+  
+  .eye {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 167px;
+    left: 204px;
+    fill: #2C2E2E;
+    -webkit-animation: eye 0.7s ease-in-out infinite;
+    animation: eye 0.7s ease-in-out infinite;
+  }
+  
+  @keyframes eat {
+  
+    0%,
+    100% {
+      stroke-dashoffset: 0;
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      stroke-dashoffset: 39;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes eye {
+  
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: translate3d(-6px, -3px, 0);
+    }
+  }
+  
+  @keyframes points {
+    0% {
+      stroke-dashoffset: 14;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      stroke-dashoffset: 64;
+    }
+  }
+  
