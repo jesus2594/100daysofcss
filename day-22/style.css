@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
+
+* {
+  list-style: none; padding: 0; margin: 0;
+  color: #fff;
+}
+
+.frame {
+  position: absolute; top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 400px; height: 400px;
+  overflow: hidden; border-radius: 5px;
+  background: linear-gradient(to right, #779aff, #69e0f3);
+  text-align: center;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+.abs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.abs > .txt-wr {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #222;
+}
+.txt-wr p:nth-child(1)  {
+  font-size: 16px;
+  font-weight: 400;
+}
+svg {
+  width: 84px;
+  height: 84px;
+}
+.t-wr svg {
+  width: 114px;
+  height: 114px;
+}
+.b-wr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.prog-wr {
+  margin-top: 20px;
+  width: 250px;
+}
+.circle {
+  position: relative;
+}
+.bg {
+  stroke: #6d90fb;
+  fill: none;
+  stroke-width: 11px;
+}
+.progress {
+  stroke: #ffffef;
+  fill: none;
+  stroke-width: 11px;
+  stroke-dasharray: 330;
+  stroke-dashoffset: 330;
+  transform: rotate(270deg);
+  transform-origin: center;
+  animation: big 1.5s ease-out forwards;
+  stroke-linecap: round;
+}
+.b-wr circle {
+  stroke-width: 10px;
+}
+.b-wr .progress {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation-name: small;
+}
+.right .progress {
+  animation-name: small2;
+}
+.circle .txt-wr {
+  top: 48%;   
+}
+.circle .txt-wr span {
+  font-size: 17px;
+  line-height: 1;
+  display: block;
+}
+.circle .txt-wr span + span {
+  font-size: 12px;
+  color: #6159d1;
+  opacity: 0.7;
+}
+.circle.top .txt-wr span {
+  font-size: 24px;
+}
+.circle.top .txt-wr span + span {
+  font-size: 17px;
+}
+
+
+@keyframes big {
+	from {
+		stroke-dashoffset: 330;
+	}
+	to {
+		stroke-dashoffset: 50;
+	}
+}
+@keyframes small {
+	from {
+		stroke-dashoffset: 240;
+	}
+	to {
+		stroke-dashoffset: 100;
+	}
+}
+@keyframes small2 {
+	from {
+		stroke-dashoffset: 240;
+	}
+	to {
+		stroke-dashoffset: 40;
+	}
+}
