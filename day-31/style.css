@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #A149FA;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dots {
+  position: absolute;
+  padding-top: 28px;
+  padding-left: 194px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 5px 0;
+}
+
+.dots .dot1 {
+  animation: dot-animation 1.02s ease-in-out infinite;
+}
+
+.dots .dot2 {
+  animation: dot-animation 1.03s ease-in-out infinite;
+}
+
+.dots .dot3 {
+  animation: dot-animation 1.05s ease-in-out infinite;
+}
+
+.dots .dot4 {
+  animation: dot-animation 1.07s ease-in-out infinite;
+}
+
+.dots .dot5 {
+  animation: dot-animation 1.09s ease-in-out infinite;
+}
+
+.dots .dot6 {
+  animation: dot-animation 1.11s ease-in-out infinite;
+}
+
+.dots .dot7 {
+  animation: dot-animation 1.13s ease-in-out infinite;
+}
+
+.dots .dot8 {
+  animation: dot-animation 1.15s ease-in-out infinite;
+}
+
+.dots .dot9 {
+  animation: dot-animation 1.17s ease-in-out infinite;
+}
+
+.dots .dot10 {
+  animation: dot-animation 1.19s ease-in-out infinite;
+}
+
+.dots .dot11 {
+  animation: dot-animation 1.21s ease-in-out infinite;
+}
+
+.dots .dot12 {
+  animation: dot-animation 1.23s ease-in-out infinite;
+}
+
+.dots .dot13 {
+  animation: dot-animation 1.25s ease-in-out infinite;
+}
+
+.dots .dot14 {
+  animation: dot-animation 1.27s ease-in-out infinite;
+}
+
+.dots .dot15 {
+  animation: dot-animation 1.29s ease-in-out infinite;
+}
+
+.dots .dot16 {
+  animation: dot-animation 1.31s ease-in-out infinite;
+}
+
+.dots .dot17 {
+  animation: dot-animation 1.33s ease-in-out infinite;
+}
+
+.dots .dot18 {
+  animation: dot-animation 1.35s ease-in-out infinite;
+}
+
+.dots .dot19 {
+  animation: dot-animation 1.37s ease-in-out infinite;
+}
+
+.dots .dot20 {
+  animation: dot-animation 1.39s ease-in-out infinite;
+}
+
+@keyframes dot-animation {
+  0%,
+  100% {
+    transform: translate3d(50px, 0, 0);
+  }
+  50% {
+    transform: translate3d(-50px, 0, 0);
+  }
+}
