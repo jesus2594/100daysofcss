@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .frame {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(100, 183, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle {
+    fill: none;
+    stroke: rgb(26, 98, 156);
+    stroke-width: 3px;
+  }
+  
+  .ring {
+    fill: none;
+    stroke: aliceblue;
+    stroke-width: 3px;
+    stroke-dasharray: 226;
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+    animation: loading 3s infinite linear;
+  }
+  
+  @keyframes loading {
+    0% {
+      stroke-dashoffset: 226;
+      transform: rotate(0deg);
+    }
+    50% {
+      stroke-dashoffset: 0;
+      transform: rotate(180deg);
+    }
+    100% {
+      stroke-dashoffset: -226;
+      transform: rotate(360deg);
+    }
+  }
+  
