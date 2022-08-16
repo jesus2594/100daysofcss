@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+  
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #2C3333;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .frame:hover .rect {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+  
+  .rect {
+    position: absolute;
+    background: #2C3333;
+    border: 1px solid #E7F6F2;
+  }
+  
+  .rect1 {
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+    animation: spinning 2s ease-in-out 0.03s alternate infinite;
+  }
+  
+  .rect2 {
+    width: 190px;
+    height: 190px;
+    top: 105px;
+    left: 105px;
+    z-index: 2;
+    animation: spinning 2s ease-in-out 0.06s alternate infinite;
+  }
+  
+  .rect3 {
+    width: 180px;
+    height: 180px;
+    top: 110px;
+    left: 110px;
+    z-index: 2;
+    animation: spinning 2s ease-in-out 0.1s alternate infinite;
+  }
+  
+  .rect4 {
+    width: 170px;
+    height: 170px;
+    top: 115px;
+    left: 115px;
+    z-index: 4;
+    animation: spinning 2s ease-in-out 0.13s alternate infinite;
+  }
+  
+  .rect5 {
+    width: 160px;
+    height: 160px;
+    top: 120px;
+    left: 120px;
+    z-index: 5;
+    animation: spinning 2s ease-in-out 0.16s alternate infinite;
+  }
+  
+  .rect6 {
+    width: 150px;
+    height: 150px;
+    top: 125px;
+    left: 125px;
+    z-index: 6;
+    animation: spinning 2s ease-in-out 0.2s alternate infinite;
+  }
+  
+  .rect7 {
+    width: 140px;
+    height: 140px;
+    top: 130px;
+    left: 130px;
+    z-index: 7;
+    animation: spinning 2s ease-in-out 0.23s alternate infinite;
+  }
+  
+  .rect8 {
+    width: 130px;
+    height: 130px;
+    top: 135px;
+    left: 135px;
+    z-index: 8;
+    animation: spinning 2s ease-in-out 0.26s alternate infinite;
+  }
+  
+  .rect9 {
+    width: 120px;
+    height: 120px;
+    top: 140px;
+    left: 140px;
+    z-index: 9;
+    animation: spinning 2s ease-in-out 0.3s alternate infinite;
+  }
+  
+  .rect10 {
+    width: 110px;
+    height: 110px;
+    top: 145px;
+    left: 145px;
+    z-index: 10;
+    animation: spinning 2s ease-in-out 0.33s alternate infinite;
+  }
+  
+  .rect11 {
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 150px;
+    z-index: 11;
+    animation: spinning 2s ease-in-out 0.36s alternate infinite;
+  }
+  
+  .rect12 {
+    width: 90px;
+    height: 90px;
+    top: 155px;
+    left: 155px;
+    z-index: 12;
+    animation: spinning 2s ease-in-out 0.4s alternate infinite;
+  }
+  
+  .rect13 {
+    width: 80px;
+    height: 80px;
+    top: 160px;
+    left: 160px;
+    z-index: 13;
+    animation: spinning 2s ease-in-out 0.43s alternate infinite;
+  }
+  
+  .rect14 {
+    width: 70px;
+    height: 70px;
+    top: 165px;
+    left: 165px;
+    z-index: 14;
+    animation: spinning 2s ease-in-out 0.46s alternate infinite;
+  }
+  
+  .rect15 {
+    width: 60px;
+    height: 60px;
+    top: 170px;
+    left: 170px;
+    z-index: 15;
+    animation: spinning 2s ease-in-out 0.5s alternate infinite;
+  }
+  
+  .rect16 {
+    width: 50px;
+    height: 50px;
+    top: 175px;
+    left: 175px;
+    z-index: 16;
+    animation: spinning 2s ease-in-out 0.53s alternate infinite;
+  }
+  
+  .rect17 {
+    width: 40px;
+    height: 40px;
+    top: 180px;
+    left: 180px;
+    z-index: 17;
+    animation: spinning 2s ease-in-out 0.56s alternate infinite;
+  }
+  
+  .rect18 {
+    width: 30px;
+    height: 30px;
+    top: 185px;
+    left: 185px;
+    z-index: 18;
+    animation: spinning 2s ease-in-out 0.6s alternate infinite;
+  }
+  
+  .rect19 {
+    width: 20px;
+    height: 20px;
+    top: 190px;
+    left: 190px;
+    z-index: 19;
+    animation: spinning 2s ease-in-out 0.63s alternate infinite;
+  }
+  
+  .rect20 {
+    width: 10px;
+    height: 10px;
+    top: 195px;
+    left: 195px;
+    z-index: 20;
+    animation: spinning 2s ease-in-out 0.66s alternate infinite;
+  }
+  
+  @keyframes spinning {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0) rotate(360deg);
+    }
+  }
+  
