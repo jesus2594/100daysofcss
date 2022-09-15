@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+  
+  .frame {
+    position: absolute;
+   top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.4);
+    overflow: visible;
+    background: #FFFEFA;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 200px 60px 60px 60px;
+    justify-content: space-evenly;
+    padding: 5px;
+  
+  }
+  
+  .card {
+    width: 110px;
+    height: 180px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  .card .basic {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  .card .pro {
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+  
+  .card .premium {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  
+  .header {
+    width: 110px;
+    height: 30px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 600;
+    background: #3F73D1;
+    color: #fff;
+  }
+  
+  .price {
+    width: 110px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  .money {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 5px;
+  }
+  
+  .season {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2;
+    margin: -10px;
+  }
+  
+  .description {
+    font-size: 10px;
+    margin: 5px 10px;
+  }
+  
+  .box {
+    position: absolute;
+    grid-row: 2;
+    width: 370px;
+    height: 60px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .min {
+    font-size: 10px;
+    float: left;
+  }
+  
+  .max {
+    font-size: 10px;
+    float: right;
+  }
+  
+  .basic,
+  .pro,
+  .premium {
+    transition: all 0.4s ease;
+  }
+  
+  .basic:hover,
+  .pro:hover,
+  .premium:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 4px 8px 16px 0 rgba(19, 61, 102, 0.5);
+  }
+  
+  .project,
+  .users,
+  .gb {
+    position: absolute;
+    display: block;
+    margin: 15px 0;
+    background: #C2C2C2;
+    width: 350px;
+    height: 10px;
+    border-radius: 5px;
+    align-content: center;
+  }
+  
+  .b1 {
+    top: 0;
+  }
+  
+  .b2 {
+    top: 60px;
+  }
+  
+  .b3 {
+    top: 120px;
+  }
+  
+  .project-value,
+  .users-value,
+  .gb-value {
+    position: absolute;
+    display: block;
+    margin: 15px 0;
+    width: 0px;
+    height: 10px;
+    border-radius: 5px;
+    background: #2D8BEB;
+    transition: all 0.4s ease;
+  }
+  
+  .basic:hover~.box .project-value {
+    width: 50px;
+    transition: all 0.4s ease;
+  }
+  
+  .basic:hover~.box .users-value {
+    width: 70px;
+    transition: all 0.4s ease;
+  }
+  
+  .basic:hover~.box .gb-value {
+    width: 90px;
+    transition: all 0.4s ease;
+  }
+  
+  .pro:hover~.box .project-value {
+    width: 120px;
+    transition: all 0.4s ease;
+  }
+  
+  .pro:hover~.box .users-value {
+    width: 170px;
+    transition: all 0.4s ease;
+  }
+  
+  .pro:hover~.box .gb-value {
+    width: 190px;
+    transition: all 0.4s ease;
+  }
+  
+  .premium:hover~.box .project-value {
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  
+  .premium:hover~.box .users-value {
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  
+  .premium:hover~.box .gb-value {
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  
