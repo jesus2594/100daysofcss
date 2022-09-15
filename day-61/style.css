@@ -1,0 +1,47 @@
+.frame {
+    width: 400px;
+    height: 400px;
+    border-radius: 7px;
+    box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .layer {
+    position: absolute;
+    width: 400px;
+    aspect-ratio: 1;
+    border-radius: 7px;
+  }
+  
+  .top {
+    background: linear-gradient(
+      135deg,
+      rgba(242, 210, 162, 1) 0%,
+      rgba(185, 214, 188, 1) 50%,
+      rgba(52, 155, 144, 1) 100%
+    );
+    animation: switch 2s ease-in-out alternate infinite;
+    opacity: 0;
+  }
+  
+  .bottom {
+    background: linear-gradient(
+      45deg,
+      rgba(52, 155, 144, 1) 0%,
+      rgba(91, 149, 170, 1) 50%,
+      rgba(9, 84, 115, 1) 100%
+    );
+  }
+  
+  @keyframes switch {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
