@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #816797;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mic {
+  position: absolute;
+  top: 125px;
+  left: 125px;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease-in;
+}
+
+input {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.circle {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  transform-origin: 50% 50%;
+  transition: all 0.5s ease-in;
+  opacity: 1;
+}
+
+.body {
+  position: absolute;
+  top: 20px;
+  width: 30px;
+  height: 60px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.fill {
+  position: absolute;
+  top: 30px;
+  width: 5px;
+  height: 20px;
+  border-radius: 20px;
+  background: #000;
+}
+
+.foot {
+  position: absolute;
+  top: 65px;
+  width: 5px;
+  height: 30px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.foot::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -7px;
+  width: 20px;
+  height: 5px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.dot {
+  position: absolute;
+  top: 175px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.m {
+  transition: all 0.5s ease-in;
+}
+
+.d1 {
+  left: 155px;
+  animation: dots 2s ease infinite;
+}
+
+.d2 {
+  left: 175px;
+  animation: dots 2s ease 0.4s infinite;
+}
+
+.d3 {
+  left: 195px;
+  animation: dots 2s ease 0.6s infinite;
+}
+
+input:checked~.dot {
+  transition: all 0.5s ease-out;
+  opacity: 1;
+}
+
+input:checked~.mic .m {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+
+input:checked~.mic .circle {
+  animation: circle-animation 5s linear infinite;
+}
+
+@keyframes circle-animation {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 296 296;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    stroke-dashoffset: -592;
+    stroke-dasharray: 296 296;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+
+  0%,
+  100% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translate(-5px);
+  }
+}
