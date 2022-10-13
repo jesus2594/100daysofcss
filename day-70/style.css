@@ -1,0 +1,70 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  color: white;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  background-color: #512626;
+  cursor: pointer;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.caja {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100px;
+  background-color: #E27474;
+  padding: 50px;
+  transition: all 0.3s ease-in-out;
+} 
+
+.caja:hover {
+  box-shadow: 10px 10px 5px 1px rgba(161,83,83,0.52) inset;
+-webkit-box-shadow: 10px 10px 5px 1px rgba(161,83,83,0.52) inset;
+-moz-box-shadow: 10px 10px 5px 1px rgba(161,83,83,0.52) inset;
+transform: scale(0.9);
+border: 2px;
+}
+
+.dias {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.numeros {
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+}
