@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2? family= Michroma & display=swap');
+
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.frame {
+	background-color: #1ABC9C;
+	width: 30rem;
+	height: 30rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 7px;
+	background: #1abc9c;
+	box-shadow:  27px 27px 54px #169e83,-27px -27px 54px #ffffff;
+}
+
+.center {
+	width: 20rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.buttons {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+input {
+	display: none;
+}
+
+label {
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Michroma', sans-serif;
+	font-size: 1.5em;
+}
+
+label:hover {
+	background-color: rgba(0, 0, 0, 0.16);
+}
+
+#unput-1:checked ~ .botao1  {
+	background: #fff;
+	color:aquamarine;
+	border: solid #fff;
+}
+
+#unput-2:checked ~ .botao2  {
+	background: #fff;
+	color:aquamarine;
+	border: solid #fff;
+}
+
+#unput-3:checked ~ .botao3  {
+	background: #fff;
+	color:aquamarine;
+	border: solid #fff;
+}
+
+#unput-4:checked ~ .botao4  {
+	background: #fff;
+	color:aquamarine;
+	border: solid #fff;
+}
