@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #204060;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 40px;
+}
+
+.text {
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  text-align: center;
+  z-index: 2;
+}
+
+.password {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 60px;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  background: #fff;
+  line-height: 3.5;
+}
+
+.key {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  height: 60px;
+  background: #59CE8F;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 3.5;
+}
+
+.text:valid~.password {
+  animation: pass-animation 1s ease-out forwards;
+
+}
+
+.text:valid~.key {
+  animation: key-animation 1s ease-out forwards;
+
+}
+
+.text:valid {
+  z-index: -1;
+  opacity: 0;
+  transition: all 1s ease forwards;
+}
+
+@keyframes pass-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes key-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+}
