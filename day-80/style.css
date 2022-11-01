@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.col {
+  position: relative;
+  flex: 1 1 auto;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.c1,
+.c3 {
+  background: #D08AFF;
+}
+
+.c2,
+.c4 {
+  background: #5B6618;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.c1:hover,
+.c2:hover,
+.c3:hover,
+.c4:hover {
+  width: 100%;
+}
+
+.col:hover .text {
+  opacity: 1;
+
+}
