@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+  
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #ece;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+  #send,
+  #done {
+    display: none;
+  }
+  
+  .button {
+    position: absolute;
+    top: 180px;
+    left: 155px;
+    width: 90px;
+    height: 40px;
+    border-radius: 50px;
+    background: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    z-index: 2;
+  }
+  
+  .done {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    top: 180px;
+    left: 155px;
+  
+    border-radius: 50px;
+    background: #7FB77E;
+    color: #fff;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transform-style: preserve-3d;
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    transform: rotateX(-90deg);
+  
+  }
+  
+  #send:checked~.button {
+    transform: rotateX(90deg);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+  
+  #send:checked~.done {
+    transform: rotateX(0deg);
+    opacity: 1;
+    transition: all 0.5s ease-out;
+  }
+  
+  #done:checked~.button {
+    transform: rotateX(90deg);
+    opacity: 1;
+    transition: all 0.5s ease-out;
+  
+  }
+  
+  #done:checked~.done {
+    transform: rotateX(90deg);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  
+  }
+  
