@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #FFC300;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.diamond {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.d1 {
+  position: absolute;
+  clip-path: polygon(50% 100%, 25% 35%, 75% 35%);
+  background: #EB1C34;
+  width: 200px;
+  height: 200px;
+}
+
+.d2 {
+  position: absolute;
+  clip-path: polygon(50% 100%, 0 37%, 25% 35%);
+  background: #873942;
+  width: 200px;
+  height: 200px;
+}
+
+.d3 {
+  clip-path: polygon(50% 100%, 100% 37%, 72% 35%);
+  position: absolute;
+  background: #873942;
+  width: 200px;
+  height: 200px;
+
+}
+
+.d4 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 91%);
+  position: absolute;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  background: #B81629;
+}
+
+.d5 {
+  position: absolute;
+  clip-path: polygon(38% 100%, 0 0, 100% 0);
+  background: #FF1818;
+  top: 25px;
+  left: 25px;
+  width: 70px;
+  height: 48px;
+}
+
+.d6 {
+  position: absolute;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: #B81629;
+  top: 25px;
+  left: 53px;
+  width: 85px;
+  height: 45px;
+}
+
+.d7 {
+  position: absolute;
+  clip-path: polygon(58% 100%, 0 0, 100% 0);
+  background: #FF1818;
+  top: 25px;
+  left: 95px;
+  width: 70px;
+  height: 45px;
+}
+
+.d8 {
+  position: absolute;
+  clip-path: polygon(46% 0%, 10% 91%, 93% 100%);
+  background: #B81629;
+  top: 25px;
+  left: 129px;
+  width: 75px;
+  height: 50px;
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0px 0px 16px 5px #fff;
+  transform: rotate(-44deg) translateX(-30px);
+  animation: shining 3s linear infinite both;
+}
+
+@keyframes shining {
+  0% {
+    transform: rotate(-44deg) translateX(-30px);
+  }
+
+  10%,
+  100% {
+    transform: rotate(-44deg) translateX(90px);
+  }
+}
