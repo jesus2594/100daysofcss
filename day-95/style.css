@@ -1,0 +1,132 @@
+body{
+    background-color:#FFDCB5;
+  }
+  #head{
+  display:flex;
+    align-items:center;
+    justify-content:center;
+  
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left:-150px;
+    margin-top: -150px;
+    width:300px;
+    height:300px;
+    background:#F7949A;
+    border: 1px solid #F7949A;
+    border-radius: 50%;
+    z-index: 1; 
+    
+  }
+  #left-ear{
+    position:absolute;
+  
+    margin-left:30px;
+    z-index: -1; 
+      left: 50%;
+    top:50%;
+  transform: skew(20deg) rotate(20deg);
+    
+    margin-left:-130px;
+    margin-top: -150px;
+    
+  }
+  #right-ear{
+      position:absolute;
+  
+    margin-left:30px;
+    z-index: -1; 
+      left: 50%;
+    top:50%;
+  transform: skew(-20deg) rotate(-20deg);
+    
+    margin-left:10px;
+    margin-top: -150px;
+  }
+  .ears{
+    width:100px;
+    height:100px;
+    background-color:#FFB7BC;
+    border: 10px solid #F7949A;
+    border-radius: 10px;
+  
+    z-index: -1;
+  }
+  
+  .eye{
+    margin-top:-0px;
+  
+    width:50px;
+    height:50px;
+    background-color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation: blink 5s linear infinite;
+  }
+  .black-ball{
+    
+    width:10px;
+    height:10px;
+    background-color:#000;
+    border-radius:50%;
+  
+  }
+  
+  #right-eye{
+    margin-left:70px;
+  }
+  
+  #nose{
+      display:flex;
+    align-items:center;
+    justify-content:center;
+    top:50%;
+    left:50%;
+    position:absolute;
+    width:120px;
+    height:100px;
+    background-color:#FFB7BC;
+    border-radius:50%;
+    margin-left:-59px;
+    margin-top:20px;
+    z-index:2;
+  }
+  
+  .nose-ball{
+    
+    width:20px;
+    height:20px;
+    background-color:#CE666D;
+    border-radius:50%;
+    margin:10px;
+    margin-top:-10px;
+  }
+  
+  @keyframes blink{
+    0%{
+      height:50px;
+    }
+     23%{
+      height:50px;
+    }
+    25%{
+      height:0px;
+    }
+    27%{
+      height:50px;
+    }
+    100%{
+      height:50px;
+    }
+  }
+  
+  #made{
+    top:50%;
+    left:50%;
+    margin-top:200px;
+    margin-left:-65px;
+    position:absolute;
+  }
