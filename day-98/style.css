@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #002B5B;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.t1 {
+  top: 110px;
+  left: 110px;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-top: 90px solid #3F91C7;
+  animation: t1-animation 1.5s ease-in-out infinite alternate;
+}
+
+.t2 {
+  top: 110px;
+  right: 110px;
+  border-top: 90px solid transparent;
+  border-right: 90px solid #3289C3;
+  border-bottom: 90px solid transparent;
+  animation: t2-animation 1.5s ease-in-out infinite alternate;
+}
+
+.t3 {
+  bottom: 110px;
+  left: 110px;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  border-bottom: 90px solid #2B82BB;
+  animation: t3-animation 1.5s ease-in-out infinite alternate;
+}
+
+.t4 {
+  top: 110px;
+  left: 110px;
+  border-top: 90px solid transparent;
+  border-left: 90px solid #2578AE;
+  border-bottom: 90px solid transparent;
+  animation: t4-animation 1.5s ease-in-out infinite alternate;
+}
+
+.back {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  animation: back-animation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes back-animation {
+
+  0%,
+  20% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes t1-animation {
+
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-180px);
+  }
+}
+
+@keyframes t2-animation {
+
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateX(180px);
+  }
+}
+
+@keyframes t3-animation {
+
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(180px);
+  }
+}
+
+@keyframes t4-animation {
+
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateX(-180px);
+  }
+}
